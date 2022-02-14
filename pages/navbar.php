@@ -40,7 +40,7 @@
                         <a class="dropdown-item" href="action.php?pages=all-data">All Product List</a>
 <!--                        <a class="dropdown-item" href="action.php?pages=logs">Logs</a>-->
                         <a class="dropdown-item" href="action.php?pages=all-user">All User</a>
-<!--                        <a class="dropdown-item" href="action.php?pages=task">App</a>-->
+                        <a class="dropdown-item" href="action.php?pages=task">App</a>
                         <a class="dropdown-item" href="action.php?pages=signout">Log Out</a>
                     </div>
                 </li>

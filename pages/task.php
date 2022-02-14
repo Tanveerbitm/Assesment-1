@@ -17,15 +17,21 @@ include("navbar.php"); ?>
                             <div class="card card-body">
                                 <form action="action.php" method="POST" >
                                     <div class="form-group row">
-                                        <label for="" class="col-md-3 col-form-label" >Enter Number</label>
+                                        <label for="" class="col-md-3 col-form-label" >starting Number</label>
                                         <div class="col-md-9">
-                                            <input type="number" class="form-control" name="given_number"/>
+                                            <input type="number" class="form-control" name="start_number" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="" class="col-md-3 col-form-label" >Ending Number</label>
+                                        <div class="col-md-9">
+                                            <input type="number" class="form-control" name="end_number" />
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="" class="col-md-3 col-form-label" >Result</label>
                                         <div class="col-md-9">
-                                            <input type="text" value="<?php echo isset($result)? $result:''; ?>" readonly class="form-control" />
+                                            <textarea class="form-control" readonly><?php echo isset($result)? $result:''; ?></textarea>
                                         </div>
                                     </div>
 
