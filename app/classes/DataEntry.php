@@ -89,6 +89,28 @@ class DataEntry
         return false;
 
     }
+    public function getAllUser(){
+        $this->fileName = 'user.txt';
+        if (@file_get_contents($this->fileName)) {
+            $this->data = file_get_contents($this->fileName);
+            if (!$this->data) {
+                echo 'error';
+            }
+            $this->array = explode('$', $this->data);
+            foreach ($this->array as $key => $value) {
+                $this->array1 = explode(',', $value);
+                if ($this->array1[0]) {
+                    $this->array2[$key]['name'] = $this->array1[0];
+                    $this->array2[$key]['email'] = $this->array1[1];
+                    $this->array2[$key]['password'] = $this->array1[2];
+                }
+            }
+            return $this->array2;
+        } else {
+            return [];
+        }
+
+    }
     public function getAllData()
     {
         $this->fileName = 'db.txt';

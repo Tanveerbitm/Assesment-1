@@ -64,6 +64,6 @@ class Authentication
     }
     public function signOut(){
         unset($_SESSION['name']);
-        header('location: action.php?pages=login');
+        header('location: action.php?pages=products');
     }
 }

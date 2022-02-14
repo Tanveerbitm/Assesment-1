@@ -21,7 +21,7 @@
                     <div class="card-header">
                         <div class="row">
                             <div class="col-md-6"><h3 class="pl-3">All Product List</h3></div>
-                            <div class="col-md-6"><a href="action.php?pages=logs" class="float-right btn btn-dark mr-3">See All Logs</a></div>
+<!--                            <div class="col-md-6"><a href="action.php?pages=logs" class="float-right btn btn-dark mr-3">See All Logs</a></div>-->
                         </div>
                     <div class="card-body">
                         <table class="table table-bordered table-hover no-gutters">
@@ -33,7 +33,7 @@
                                 <th>Category</th>
                                 <th>Brand</th>
                                 <th>Image</th>
-                                <th>Edit Or Remove</th>
+<!--                                <th>Edit Or Remove</th>-->
                             </tr>
 
                             </thead>
@@ -50,16 +50,16 @@
                                         <td><?php echo $data['category'];?></td>
                                         <td><?php echo $data['brand'];?></td>
                                         <td><img src="<?php echo $data['image'];?>" height="80" width="100"/></td>
-                                        <td>
-                                            <div class="row">
-                                                <div class="col-6">
-                                                    <a href="action.php?pages=update&id=<?php echo isset($data['id'])?$data['id']:'' ?>"><i class="fa-solid fa-pen-to-square btn btn-success"></i></a>
-                                                </div>
-                                                <div class="col-6">
-                                                    <a href="action.php?pages=all-data&status=delete&id=<?php echo isset($data['id'])?$data['id']:'' ?>&img=<?php echo $data['image'];?>"><i class="fa-solid fa-trash-can btn btn-danger"></i></a>
-                                                </div>
-                                            </div>
-                                        </td>
+<!--                                        <td>-->
+<!--                                            <div class="row">-->
+<!--                                                <div class="col-6">-->
+<!--                                                    <a href="action.php?pages=update&id=--><?php //echo isset($data['id'])?$data['id']:'' ?><!--"><i class="fa-solid fa-pen-to-square btn btn-success"></i></a>-->
+<!--                                                </div>-->
+<!--                                                <div class="col-6">-->
+<!--                                                    <a href="action.php?pages=all-data&status=delete&id=--><?php //echo isset($data['id'])?$data['id']:'' ?><!--&img=--><?php //echo $data['image'];?><!--"><i class="fa-solid fa-trash-can btn btn-danger"></i></a>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </td>-->
                                     </tr>
                                 <?php } }?>
                             </tbody>

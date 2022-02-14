@@ -2,9 +2,29 @@
     <div class="container">
         <?php if(isset($_SESSION['name'])){?>
         <a href="action.php?pages=products" class="navbar-brand">PRODUCTS</a>
-        <h2 class="text-white">Dashboard</h2>
+            <form action="action.php" method="POST">
+                <div class="input-group mb-2">
+                    <input type="text" class="form-control" name="search" placeholder="Filter List by product Code"/>
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-success" name="product_search_btn">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+<!--        <h2 class="text-white">Dashboard</h2>-->
         <?php }else{  ?>
         <a href="action.php?pages=products" class="navbar-brand">PRODUCTS</a>
+             <form action="action.php" method="POST">
+                <div class="input-group mb-2">
+                   <input type="text" class="form-control" name="search" placeholder="Filter List by product Code"/>
+                     <div class="input-group-append">
+                        <button type="submit" class="btn btn-success" name="product_search_btn">
+                           <i class="fa fa-search"></i>
+                        </button>
+                     </div>
+                </div>
+             </form>
         <?php }  ?>
         <div class="navbar-nav">
             <?php if(isset($_SESSION['name'])){?>
@@ -18,8 +38,9 @@
                         <a class="dropdown-item" href="action.php?pages=dashboard">Dashboard</a>
                         <a class="dropdown-item" href="action.php?pages=data-entry">Product Entry</a>
                         <a class="dropdown-item" href="action.php?pages=all-data">All Product List</a>
-                        <a class="dropdown-item" href="action.php?pages=logs">Logs</a>
-                        <a class="dropdown-item" href="action.php?pages=task">App</a>
+<!--                        <a class="dropdown-item" href="action.php?pages=logs">Logs</a>-->
+                        <a class="dropdown-item" href="action.php?pages=all-user">All User</a>
+<!--                        <a class="dropdown-item" href="action.php?pages=task">App</a>-->
                         <a class="dropdown-item" href="action.php?pages=signout">Log Out</a>
                     </div>
                 </li>

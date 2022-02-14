@@ -10,6 +10,7 @@ include ("navbar.php"); ?>
                         <img src="<?php echo $element['image']  ?>" alt="" class="card-img-top" width="150" height="200"/>
                         <div class="card-body">
                             <p class="card-title text-primary font-weight-bold"><?php echo $element['name']?></p>
+                            <p class="font-weight-bold" >Code: <?php echo  $element['code'] ?></p>
                             <div class="row">
                                 <div class="col-md-5"><p class="font-weight-bold" style="font-size: 1.5rem">$<?php echo  $element['price'] ?></p></div>
                                 <div class="col-md-7"><i class="fa-solid fa-tag pt-3"> </i> <?php echo  $element['category'] ?></div>

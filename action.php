@@ -87,6 +87,14 @@ if (isset($_GET['pages'])) {
         } else {
             include 'pages/login.php';
         }
+    }elseif ($_GET['pages'] == 'all-user') {
+        if ($permission) {
+            $dataObj = new DataEntry();
+            $allUser = $dataObj->getAlluser();
+            include 'pages/user.php';
+        } else {
+            include 'pages/login.php';
+        }
     } else {
         if ($permission) {
             include 'pages/dashboard.php';
@@ -123,7 +131,11 @@ if (isset($_GET['pages'])) {
     $dataObj = new DataEntry();
     $allData = $dataObj->getAllFilterData($_POST['search']);
     include 'pages/alldata.php';
-}else{
+}elseif (isset($_POST['product_search_btn'])) {
+    $dataObj = new DataEntry();
+    $products = $dataObj->getAllFilterData($_POST['search']);
+    include 'pages/products.php';
+} else{
     $dataObj = new DataEntry();
     $products = $dataObj->getAllData();
     include 'pages/products.php';
